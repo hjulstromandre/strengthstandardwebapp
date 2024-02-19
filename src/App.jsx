@@ -4,7 +4,7 @@ import TextBoxes from './TextBoxes'; // Assuming TextBoxes.js is in the same dir
 function App() {
   return (
     <div className="App">
-      <h1>My React App</h1>
+      <h1>Powerlifting performance standard app</h1>
       <TextBoxes />
     </div>
   );

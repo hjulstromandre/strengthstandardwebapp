@@ -3,16 +3,37 @@ import './TextBoxes.css'; // Import CSS file for styling
 
 function TextBoxes() {
   // Define state variables to store the values of your textboxes
-  const [textBox1Value, setTextBox1Value] = useState('');
-  const [textBox2Value, setTextBox2Value] = useState('');
+  const [gender, setGender] = useState('');
+  const [equipment, setEquipment] = useState('');
+  const [ageDivision, setAgeDivision] = useState('');
+  const [comparisonCategory, setComparisonCategory] = useState('');
+  const [liftAmount, setLiftAmount] = useState('');
 
   // Event handler functions to update the state when the text in the textboxes change
-  const handleTextBox1Change = (event) => {
-    setTextBox1Value(event.target.value);
+  const handleGenderChange = (event) => {
+    setGender(event.target.value);
   };
 
-  const handleTextBox2Change = (event) => {
-    setTextBox2Value(event.target.value);
+  const handleEquipmentChange = (event) => {
+    setEquipment(event.target.value);
+  };
+
+  const handleAgeDivisionChange = (event) => {
+    setAgeDivision(event.target.value);
+  };
+
+  const handleComparisonCategoryChange = (event) => {
+    setComparisonCategory(event.target.value);
+  };
+
+  const handleLiftAmountChange = (event) => {
+    setLiftAmount(event.target.value);
+  };
+
+  // Event handler function for button click
+  const handleClick = () => {
+    // You can perform any action here when the button is clicked
+    console.log('Button clicked!');
   };
 
   return (
@@ -20,35 +41,46 @@ function TextBoxes() {
       {/* Render the textboxes */}
       <input
         type="text"
-        value={textBox1Value}
-        onChange={handleTextBox1Change}
+        value={gender}
+        onChange={handleGenderChange}
         placeholder="Gender"
         className="textBox"
       />
       <br />
       <input
         type="text"
-        value={textBox2Value}
-        onChange={handleTextBox2Change}
+        value={equipment}
+        onChange={handleEquipmentChange}
         placeholder="Equipment"
         className="textBox"
       />
       <br />
       <input
         type="text"
-        value={textBox2Value}
-        onChange={handleTextBox2Change}
+        value={ageDivision}
+        onChange={handleAgeDivisionChange}
         placeholder="Age division"
         className="textBox"
       />
       <br />
       <input
         type="text"
-        value={textBox2Value}
-        onChange={handleTextBox2Change}
+        value={comparisonCategory}
+        onChange={handleComparisonCategoryChange}
         placeholder="Comparison category"
         className="textBox"
       />
+      <br />
+      <input
+        type="text"
+        value={liftAmount}
+        onChange={handleLiftAmountChange}
+        placeholder="How much do you lift?"
+        className="textBox"
+      />
+      <br />
+      {/* Render the button */}
+      <button onClick={handleClick}>Submit</button>
     </div>
   );
 }
